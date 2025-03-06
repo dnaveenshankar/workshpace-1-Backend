@@ -1,0 +1,27 @@
+package com.wipro.mobilestore.entity;
+
+import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+@Table(name = "cart_tbl")
+public class Cart {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int cartId;
+    private double cartTotal;
+
+    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CartItem> cartItems;
+
+    @JsonIgnore
+    @OneToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
+}

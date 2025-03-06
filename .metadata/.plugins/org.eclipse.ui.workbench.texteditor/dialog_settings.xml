@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<section name="java.lang.Class">
+		<item key="replaceBarOpen" value="true"/>
+		<list key="findhistory">
+			<item value="abc"/>
+			<item value="RegistrationResponseDTO"/>
+		</list>
+		<list key="replacehistory">
+			<item value="wipro"/>
+			<item value="CourseRegistrationDTO"/>
+		</list>
+	</section>
+</section>

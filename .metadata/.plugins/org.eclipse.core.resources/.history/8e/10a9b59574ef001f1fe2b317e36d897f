@@ -1,0 +1,18 @@
+package com.wipro.orderservice.controller;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class DemoController {
+
+	@Value("${myname}")
+	private String name;
+	
+	@GetMapping("/data")
+	public String getData() {
+	
+		return "My name is " + name;
+	}
+}
